@@ -32,7 +32,7 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
 
     public void toggleSetStartNode() { setStartNode = !setStartNode; }
     public void toggleSetGoalNode() { setGoalNode = !setGoalNode; }
-    public void toggleCanEdit() { canEdit = !canEdit; }
+    public void setCanEdit(boolean canEdit) { this.canEdit = canEdit; }
 
     @Override
     public void paint(Graphics g) {

@@ -44,7 +44,7 @@ public class Controls extends JPanel {
                 setStartBtn.setEnabled(false);
                 setGoalBtn.setEnabled(false);
                 runBtn.setEnabled(false);
-                board.toggleCanEdit();
+                board.setCanEdit(false);
 
                 Path p = new Path();
                 p.findPath();
@@ -58,7 +58,7 @@ public class Controls extends JPanel {
                 setStartBtn.setEnabled(true);
                 setGoalBtn.setEnabled(true);
                 runBtn.setEnabled(true);
-                board.toggleCanEdit();
+                board.setCanEdit(true);
 
                 Map.getMap().clearMap();
                 board.repaint();
