@@ -11,7 +11,7 @@ public class Path {
         map = Map.getMap();
     }
 
-    public void findPath() {
+    public boolean findPath() {
         Vector<Node> closedSet = new Vector<Node>();
         Vector<Node> openSet = new Vector<Node>();
 
@@ -40,7 +40,7 @@ public class Path {
                     }
                     cameFrom = cameFrom.getCameFrom();
                 }
-                break;
+                return true;
             }
 
             // Remove current from open set and add to closed set
@@ -66,7 +66,7 @@ public class Path {
                 }
             }
         }
-        return;
+        return false;
     }
 
     private Vector<Node> getNeighbors(Node node) {
