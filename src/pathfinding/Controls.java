@@ -41,6 +41,11 @@ public class Controls extends JPanel {
                     return;
                 }
 
+                setStartBtn.setEnabled(false);
+                setGoalBtn.setEnabled(false);
+                runBtn.setEnabled(false);
+                board.toggleCanEdit();
+
                 Path p = new Path();
                 p.findPath();
                 board.repaint();
@@ -50,6 +55,11 @@ public class Controls extends JPanel {
         resetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                setStartBtn.setEnabled(true);
+                setGoalBtn.setEnabled(true);
+                runBtn.setEnabled(true);
+                board.toggleCanEdit();
+
                 Map.getMap().clearMap();
                 board.repaint();
             }
